@@ -23,6 +23,7 @@ ATakBlockGrid::ATakBlockGrid()
 	// Set defaults
 	Size = 3;
 	BlockSpacing = 300.f;
+	BlockScale = FVector(0.5f);
 }
 
 
@@ -49,6 +50,7 @@ void ATakBlockGrid::BeginPlay()
 		if (NewBlock != nullptr)
 		{
 			NewBlock->OwningGrid = this;
+			NewBlock->SetActorScale3D(BlockScale);
 		}
 	}
 }

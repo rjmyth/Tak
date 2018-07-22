@@ -34,6 +34,9 @@ public:
 	UPROPERTY(Category=Grid, EditAnywhere, BlueprintReadOnly)
 	float BlockSpacing;
 
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Grid)
+	FVector BlockScale;
+
 protected:
 	// Begin AActor interface
 	virtual void BeginPlay() override;
